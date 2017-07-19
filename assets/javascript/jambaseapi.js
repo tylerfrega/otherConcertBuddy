@@ -9,6 +9,7 @@ var apiReturn;
 
 
 $(document).ready(function(){
+	displayHomePage();
 	$('#searchBtn').on('click', searchJamBase);
 	$('#loadMore').on('click', function(){
 		counter = (counter + 10);
@@ -18,6 +19,9 @@ $(document).ready(function(){
 });
 
 function displayEvents(response){
+	$('#homePage').hide();
+	$('#wholeTable').show();
+
 	for(i=counter; i<display; i++){
 		var row = $("<tr>");
 		var artist = $("<td>").html(response.Events[i].Artists[0].Name);
@@ -36,7 +40,6 @@ function displayEvents(response){
 function searchJamBase(){
 	event.preventDefault();
 	console.log('something');
-
 	zip = $('#zip').val().trim();
 
 	var queryURL = "http://api.jambase.com/events?zipCode=" + zip + "&radius=50&page=0&api_key=" + apiKey2;
@@ -46,13 +49,18 @@ function searchJamBase(){
 		method: 'GET',
 
 	}).done(function(response){
-		//localStorage.setItem("jambase", JSON.stringify(response));
-		apiReturn = response; //We'll probably need to parse through the return object
-							  //again after the user selects a concert to get more details.
+		
+		apiReturn = response; 
 		console.log(zip);
 		console.log(queryURL);
 		console.log(response);
 		displayEvents(response);
 	});
+}
+
+function displayHomePage(){
+	$('#wholeTable').hide();
+	$('#map').hide();
+
 }
 
