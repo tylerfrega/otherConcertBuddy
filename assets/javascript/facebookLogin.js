@@ -1,10 +1,10 @@
 var config = {
-  apiKey: "AIzaSyDyjznyYfGDp3RFrbiIgi3QZsYo74DBfaY",
-  authDomain: "fblogin-e5e71.firebaseapp.com",
-  databaseURL: "https://fblogin-e5e71.firebaseio.com",
-  projectId: "fblogin-e5e71",
-  storageBucket: "fblogin-e5e71.appspot.com",
-  messagingSenderId: "1093216541564"
+    apiKey: "AIzaSyBC3mucjEhRSpJekVleIkecZdjSQGw0lMw",
+    authDomain: "otherconcertbuddy.firebaseapp.com",
+    databaseURL: "https://otherconcertbuddy.firebaseio.com",
+    projectId: "otherconcertbuddy",
+    storageBucket: "",
+    messagingSenderId: "791490040251"
 };
 firebase.initializeApp(config);
 
