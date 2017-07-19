@@ -42,7 +42,7 @@ function searchJamBase(){
 	console.log('something');
 	zip = $('#zip').val().trim();
 
-	var queryURL = "http://api.jambase.com/events?zipCode=" + zip + "&radius=50&page=0&api_key=" + apiKey2;
+	var queryURL = "https://api.jambase.com/events?zipCode=" + zip + "&radius=50&page=0&api_key=" + apiKey2;
 
 	$.ajax({
 		url: queryURL,

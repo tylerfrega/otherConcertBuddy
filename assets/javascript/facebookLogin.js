@@ -3,7 +3,7 @@ var config = {
     authDomain: "otherconcertbuddy.firebaseapp.com",
     databaseURL: "https://otherconcertbuddy.firebaseio.com",
     projectId: "otherconcertbuddy",
-    storageBucket: "",
+    storageBucket: "otherconcertbuddy.appspot.com",
     messagingSenderId: "791490040251"
 };
 firebase.initializeApp(config);
